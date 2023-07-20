@@ -4,12 +4,17 @@ import {Status} from "./status.js"
 import {World} from "./world.js"
 import {Control} from "./control.js"
 import {Mapurl} from "./mapurl.js"
+import {Links} from "./links.js"
 
 window.addEventListener("load", main, false);
 
 function main(){
 
 	const body = document.body
+	
+	const linksBox = document.createElement('div')
+	body.appendChild(linksBox)
+	const links = Links(linksBox)
 	
 	const statBox = document.createElement('div')
 	body.appendChild(statBox)
@@ -26,6 +31,8 @@ function main(){
 	const view = Viewer()
 	view.scrolling(false)
 	const size = view.size
+	
+	
 	
 	const url = Mapurl()
 	url.init(view)

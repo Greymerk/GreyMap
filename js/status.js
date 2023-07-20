@@ -11,7 +11,8 @@ function Status(box){
 	box.appendChild(entryList)
 	box.style.position = "fixed"
 	box.style.zIndex = 10
-	box.style.margin = "5px"
+	box.style.marginTop = "25px"
+	box.style.marginLeft = "5px"
 	box.style.border = "1"
 	box.style.backgroundColor = "PapayaWhip"
 	box.style.borderRadius = '5px'
