@@ -1,0 +1,10 @@
+
+regions/*
+signs/*
+settings.json
+last_update.txt
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
