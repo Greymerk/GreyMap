@@ -366,10 +366,14 @@ class TAG_String(TAG, Sequence):
             as utf-16 properly codes the emoji characters
             '''
             j = json.loads(read)
-            for key in j:
-                t = j[key]
-                j[key] = t.encode('utf-16','surrogatepass').decode('utf-16')
-            self.value = json.dumps(j, ensure_ascii=False)
+            if(type(j) is dict):
+                for key in j:
+                    t = j[key]
+                    j[key] = t.encode('utf-16','surrogatepass').decode('utf-16')
+                self.value = json.dumps(j, ensure_ascii=False)
+            else:
+                s = j.encode('utf-16','surrogatepass').decode('utf-16')
+                self.value = json.dumps(s, ensure_ascii=False)
 
     def _render_buffer(self, buffer):
         save_val = self.value.encode("utf-8")

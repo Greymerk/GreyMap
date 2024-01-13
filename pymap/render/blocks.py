@@ -177,6 +177,8 @@ block_colors = {
     'minecraft:granite_wall':           hsl_colors['orange'],
     'minecraft:grass':                  hsl_colors['grass'],
     'minecraft:grass_block':            hsl_colors['grass'],
+    'minecraft:short_grass':            hsl_colors['grass'],
+    'minecraft:tall_grass':             hsl_colors['grass'],
     'minecraft:grass_path':             hsl_colors['brown'],
     'minecraft:gravel':                 hsl_colors['light_gray'],
     'minecraft:green_carpet':           hsl_colors['green'],

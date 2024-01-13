@@ -33,7 +33,10 @@ class SignSide(object):
         msgs = nbt.get('messages')
         for tag in msgs:
             j = json.loads(str(tag))
-            self.messages.append(j['text'])
+            if(type(j) is dict):
+                self.messages.append(j['text'])
+            else:
+                self.messages.append(j)
         
     def isEmpty(self):
         for line in self.messages:

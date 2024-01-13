@@ -56,14 +56,14 @@ const Marker = function(container, sign){
 	container.appendChild(label)
 	label.style.position = "absolute"
 	label.style.width = '10em'
-	label.style.fontSize = "6px"
+	label.style.fontSize = "8px"
+	label.style.fontWeight = "bold"
 	label.style.fontFamily = "monospace"
+	label.style.textShadow = "-1px -1px 1px #000, 0 -1px 1px #000, 1px -1px 1px #000, 1px 0 1px #000, 1px  1px 1px #000, 0 1px 1px #000, -1px 1px 1px #000, -1px 0 1px #000"
 	label.style.color = "white"
 	label.style.whiteSpace = "nowrap"
 	label.style.textAlign = "center"
-	label.style.backgroundColor = "black"
-	label.style.opacity = "0.6"
-	label.style.borderRadius = "3px"
+	label.style.opacity = "1"
 	label.style.zIndex = "3"
 	
 	const labelText = document.createTextNode(sign.front()[1])
@@ -87,8 +87,8 @@ const Marker = function(container, sign){
 		mark.style.marginLeft = `${Math.floor(topLeft.x + offset.x/scale) - 4}px`
 		mark.style.marginTop = `${Math.floor(topLeft.y + offset.y/scale) - 4}px`
 		
-		label.style.marginLeft = `${Math.floor(topLeft.x + offset.x/scale) - 30}px`
-		label.style.marginTop = `${Math.floor(topLeft.y + offset.y/scale) - 15}px`
+		label.style.marginLeft = `${Math.floor(topLeft.x + offset.x/scale) - 40}px`
+		label.style.marginTop = `${Math.floor(topLeft.y + offset.y/scale) - 17}px`
 
 	}
 	

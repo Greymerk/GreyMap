@@ -9,16 +9,16 @@ if __name__ == '__main__':
     os.chdir(basePath)
     configName = "settings.json"
     configFile = os.path.join(basePath, configName)
-    #print(configFile)
+    print(configFile)
 
     with open(configFile) as f:
         config = json.load(f)
-        #print(data)
+        print(config)
 
     pymapDir =  os.path.join(basePath, 'pymap')
     regionDir = os.path.join(basePath, 'regions')
     worldDir = config["world"]
-    #print(pymapDir)
+    print(pymapDir)
     #os.chdir(regionDir)
     
     subprocess.run(["python3", os.path.join(pymapDir, 'map.py'), worldDir])

@@ -46,7 +46,7 @@ class RegionRenderer(object):
         filename = os.path.join(regionDir, str(rx) + '.' + str(rz)+".png")
         
         if(os.path.isfile(filename)):
-            region_map = Image.open(filename, mode='r', formats=None)
+            region_map = Image.open(filename, mode='r')
             region_map.load()
         else:
             region_map = Image.new('RGB', (16*32,16*32))
